@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+
+
+
+<body>
+
+
+<div style="text-align:center;width:100%;">
+
+
+<div id="monitor_datatype" style="padding:30px;color:white;font-weight:bold;font-size:30px;background:linear-gradient(135deg,rgb(230,230,0),rgb(250,160,0));"></div>
+
+
+<div id="container" style="display:inline-block;width:400px;border:0 solid blue;margin:0;box-sizing:border-box;margin:2%;">
+<canvas id="canvas"  width=400 height=200 style="border:8px solid rgba(0,170,210,1);border-radius:10px;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+</div>
+
+
+</div>
+
+
+<div id="demo"></div>
+
+
+
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+
+<div style="width:100%;padding:2%;">
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+<script>
+
+
+
+
+var obj = { 
+"datatype":"blood pressure", 
+"value":[ 80, 170, 110, 90, 140 ],
+"hour":[ 8, 17, 13, 20, 22 ],
+"day":[ 8, 17, 13, 20, 22 ],
+"month":[ 1,2,3,4,5 ],
+"year":[ 2017, 2017, 2017, 2017, 2017 ],
+}
+
+
+
+document.getElementById("monitor_datatype").innerHTML = obj.datatype;
+
+
+
+for (i = 0; i < obj.value.length; i++)
+{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+var x="";
+
+x += "<h2>" + obj.datatype + "</h2>";
+
+for (i = 0; i < obj.value.length; i++)
+{
+x += obj.value[i] + "<br>";
+}
+
+
+document.getElementById("demo").innerHTML = x;
+
+
+
+
+
+
+
+var w,h;
+var c = document.getElementById("canvas");
+var v = document.getElementById("container");
+var ctx = c.getContext("2d");
+window.addEventListener('resize', resizeCanvas, false);
+resizeCanvas();
+
+
+
+function resizeCanvas()
+{
+w = v.offsetWidth;
+h = v.offsetWidth/2;
+draw();
+}
+
+
+
+
+function draw()
+{
+
+ctx.canvas.width  = w;
+ctx.canvas.height = h;
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+
+//_________________________________________
+
+//columns
+ctx.fillStyle = 'rgba(210,250,240,0.5)';
+for(var i=0;i<12;i+=2)
+{ctx.fillRect(w*i/12,0,w/12,h);}
+
+
+//lines
+ctx.strokeStyle = 'rgba(0,190,210,0.2)';
+for(var i=0;i<h;i+=h/10)
+{
+ctx.moveTo(0,i);
+ctx.lineTo(w,i);
+}
+ctx.stroke();
+ctx.closePath();
+
+
+// axis
+ctx.beginPath();
+ctx.strokeStyle = 'rgba(0,170,200,1)';
+ctx.moveTo(0,h/2);
+ctx.lineTo(w,h/2);
+ctx.stroke();
+ctx.closePath();
+//_________________________________________
+
+
+
+
+
+// plot
+ctx.beginPath();
+ctx.strokeStyle= 'rgba(250,0,0,1)';
+ctx.moveTo(obj.month[0],obj.value[0]);
+
+
+
+for (i = 0; i < obj.value.length; i++)
+{
+ctx.lineTo(obj.month[i]*w/12,obj.value[i]);
+ctx.arc(obj.month[i]*w/12, obj.value[i],2, 0, 2 * Math.PI);
+ctx.moveTo(obj.month[i]*w/12,obj.value[i]);
+//ctx.fill();
+}
+
+ctx.stroke();
+ctx.closePath();
+
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+    box-sizing: border-box;
+    margin:0;
+padding:0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+
+.row {
+display:inline-block;
+line-height:0;
+font-size:0;
+margin:0;
+padding:0;
+}
+
+
+
+
+@media (min-width: 300px)
+{
+.c1
+{
+display:inline-block;
+width:40%;
+vertical-align:middle;
+}
+.c2
+{
+display:inline-block;
+width:60%;
+font-size:12px;
+line-height:16px;
+vertical-align:middle;
+}
+}
+
+
+@media (max-width: 300px)
+{
+.c1
+{
+display:inline-block;
+width:100%;
+}
+.c2
+{
+display:inline-block;
+width:100%;
+}
+}
+
+</style>
+
+
+
+
+
+
+
+
+<body>
+
+<style>
+.child {
+  border: solid 1px;
+}
+.left {
+  width: 100%;
+  
+}
+.container {
+  display: flex;
+//flex-wrap:wrap;
+}
+.right{
+width:100%;
+}
+</style>
+
+<div class="container">
+  <div class="child left">
+    <img src="images\backup.png" width=100%>
+  </div>
+  <div class="child right">
+    I'm riiiight!!! I'm riiiight!!! I'm riiiight!!! I'm riiiight!!! I'm riiiight!!!
+  </div>
+</div>
+
+
+
+</body>
+</html>

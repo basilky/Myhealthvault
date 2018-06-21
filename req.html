@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h2>Get data as JSON from a PHP file on the server.</h2>
+
+<p id="demo"></p>
+<iframe src="http://myhealthvault.tk/test.php?sample=" width=500 height=900></iframe>
+
+<script>
+
+obj = { "table":"customers", "limit":10 };
+dbParam = JSON.stringify(obj);
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       document.getElementById("demo").innerHTML = this.responseText;
+}
+};
+xmlhttp.open("GET", "myhealthvault.tk/test.php?sample=" + dbParam, true);
+xmlhttp.send();
+
+</script>
+
+
+
+</body>
+</html>
