@@ -1,5 +1,5 @@
 # myhealthvault
-Demo web application to share one health record from one patient to another.
+Demo web application to share health record from patient to doctor.
 
 What works now?
 1. Adding new user via email.
