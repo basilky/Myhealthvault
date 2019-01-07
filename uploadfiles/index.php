@@ -5,7 +5,7 @@
 session_start();
 if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 
-  header("location: https://myhealthvault.tk");
+  header("location: https://myhealthvault.dx.am");
 
   exit;
 

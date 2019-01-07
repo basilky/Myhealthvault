@@ -1,5 +1,5 @@
 <?php
-	$mysqli = new mysqli('139.59.61.30', 'root', 'Mits@123', 'healthvault');
+	$mysqli = new mysqli('fdb13.awardspace.net', '2491663_healthvault', 'Mits@123', '2491663_healthvault');
 //$mysqli = new mysqli('localhost', 'mreuser1_mits', 'mits@123','mreuser1_healthvault');
 if ($mysqli->connect_errno) {
     echo "Sorry, this website is experiencing problems.";
@@ -26,7 +26,7 @@ $st=1;
 $result=mysqli_query($mysqli,"SELECT email FROM unverified_users WHERE activationcode='$code'");
 foreach($result as $row)
 {
-     $dir="/home/mreuser1/public_html/myhealthvault.tk/documents/".$row['email'];
+     $dir="./documents/".$row['email'];
      	mkdir($dir,0777,true);
 	$msg="Your account is activated."; 
 	$result1=mysqli_query($mysqli,"UPDATE unverified_users SET status='$st' WHERE activationcode='$code'");
@@ -47,8 +47,8 @@ if(strcmp($msg,"Your account is activated.")==0)
 {
     echo " You are now being redirected to login page";
     sleep(4);
-    print "<META http-equiv='refresh' content='3;URL=https://myhealthvault.tk'>";
-    //   header( "Location: https://myhealthvault.tk" );
+    print "<META http-equiv='refresh' content='3;URL=http://myhealthvault.dx.am'>";
+    //   header( "Location: https://myhealthvault.dx.am" );
 
 }
 ?>

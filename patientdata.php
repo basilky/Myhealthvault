@@ -2,7 +2,7 @@
 if(!empty($_GET['email']))
 {
 	$email=$_GET['email'];
-	$mysqli = new mysqli('139.59.61.30', 'root', 'Mits@123', 'healthvault');
+	$mysqli = new mysqli('fdb13.awardspace.net', '2491663_healthvault', 'Mits@123', '2491663_healthvault');
 	if ($mysqli->connect_errno) {
     echo "Sorry, this website is experiencing problems.";
     echo "Error: Failed to make a MySQL connection, here is why: \n";
@@ -41,7 +41,7 @@ if(!empty($_GET['request']))
         }
     if(strcmp($request,"filelist")==0)
         {
-        $dir = "/home/mreuser1/public_html/myhealthvault.tk/documents/".$email; //path
+        $dir = "/home/mreuser1/public_html/myhealthvault.dx.am/documents/".$email; //path
         
         $return_array = array();
         
@@ -68,7 +68,7 @@ if(!empty($_GET['request']))
         }
         if(strcmp($request,"fil")==0)
         {
-        $dir = "/home/mreuser1/public_html/myhealthvault.tk/documents/".$email;
+        $dir = "/home/mreuser1/public_html/myhealthvault.dx.am/documents/".$email;
 header('Content-Type: application/json');
 
 $list = array(); //main array

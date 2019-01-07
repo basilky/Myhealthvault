@@ -5,13 +5,13 @@ session_start();
 
 if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 
-  header("location: https://myhealthvault.tk");
+  header("location: https://myhealthvault.dx.am");
   exit;
 
 }
 
 */
-	$mysqli = new mysqli('139.59.61.30', 'root', 'Mits@123', 'healthvault');
+	$mysqli = new mysqli('fdb13.awardspace.net', '2491663_healthvault', 'Mits@123', '2491663_healthvault');
 //$mysqli = new mysqli('localhost', 'mreuser1_mits', 'mits@123','mreuser1_healthvault');
 if ($mysqli->connect_errno) {
     echo "Sorry, this website is experiencing problems.";

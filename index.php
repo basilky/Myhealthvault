@@ -1,7 +1,7 @@
 <?php
 
 
-	$mysqli = new mysqli('139.59.61.30', 'root', 'Mits@123', 'healthvault');
+	$mysqli = new mysqli('fdb13.awardspace.net', '2491663_healthvault', 'Mits@123', '2491663_healthvault');
 
 //$mysqli = new mysqli('localhost', 'mreuser1_mits', 'mits@123','mreuser1_healthvault');
 if ($mysqli->connect_errno) {
@@ -180,7 +180,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <div style="display:inline-block;width:100px;padding-bottom:100px;border-radius:50%;margin:8%;background-image:url('images/logo.png');background-size:cover;">
 </div>
 
-<p style="color:rgb(44,181,232);font-weight:bold;font-size:20px;">Sign in to HealthVault</p>
+<p style="color:rgb(44,181,232);font-weight:bold;font-size:20px;">Sign in to HealthVault Demo</p>
 
 
 <!------------------------------->

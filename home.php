@@ -1,11 +1,12 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
+if (!isset($_SESSION['username']) || empty($_SESSION['username']))
+{
 
-  header("location: https://myhealthvault.tk");
+    header("location: https://myhealthvault.dx.am");
 
-  exit;
+    exit;
 
 }
 ?>
@@ -17,7 +18,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles/style.css">
 <script type="text/javascript" >
-    var user='<?php echo $_SESSION['username'];?>';
+    var user='<?php echo $_SESSION['username']; ?>';
     //alert(user);
 </script>
 <script>
@@ -51,7 +52,7 @@ function loaddoc() {
     }
   };
   xhttp.open("GET", "sharefile.php?email="+r+"&file="+f, true);
-  xhttp.send();     
+  xhttp.send();
 
 }
 
@@ -209,7 +210,7 @@ function loaddoc() {
 
 
 <div class="flex-container">
-  
+
 
 <div id="mailer-sidebar" onclick="hidemenu();">
 <div class="mailer-sidebar-btn" >Inbox</div>
@@ -217,8 +218,8 @@ function loaddoc() {
 <div class="mailer-sidebar-btn" >Drafts</div>
 <div class="mailer-sidebar-btn" >Trash</div>
 </div>
-  
-  
+
+
 <div style="background:white;font-size:12px;color:black;font-weight:300;">
 
 
@@ -265,8 +266,8 @@ document.getElementById('mailer-sidebar').style.left="-100%";
 </div>
 
 </div>
-  
-  
+
+
 </div>
 
 </div>
@@ -289,7 +290,7 @@ border-bottom:1px solid cyan;
 background:rgba(0,0,0,0.1);
 }
 
-@media only screen and (min-width:0px) 
+@media only screen and (min-width:0px)
 {
 #mailer-sidebar
 {
@@ -310,7 +311,7 @@ padding:2%;
 }
 }
 
-@media only screen and (min-width:400px) 
+@media only screen and (min-width:400px)
 {
 #mailer-sidebar{
 position:absolute;
@@ -521,9 +522,9 @@ text-align:left;
 
 
 <div id="overlay" style="position:fixed;left:0;top:0;width:100%;height:100%;display:none;background:rgba(0,0,0,0.3);z-index:1000;text-align:center;">
-    
-    
-<div style="padding:2%;display:inline-block;background:white;margin-top:15%;">  
+
+
+<div style="padding:2%;display:inline-block;background:white;margin-top:15%;">
 
 
 <p style="color:rgb(44,181,232);font-weight:bold;font-size:20px;">Share files</p>
@@ -552,7 +553,7 @@ text-align:left;
 
 
 <style>
-    
+
 #shareform .block{
 padding:2%;
 }
@@ -563,7 +564,7 @@ font-weight:bold;
 border:1px solid cyan;
 }
 
-    
+
 </style>
 
 
@@ -572,7 +573,7 @@ border:1px solid cyan;
 
 
 <div style="display:inline-block;width:95%;background:rgb(255,255,255);text-align:left;box-shadow:0 0 15px black;">
-    
+
 
 
 <div style="background:rgb(210,230,255);padding:10px;">
@@ -581,7 +582,7 @@ border:1px solid cyan;
 
 <div style="display:inline-block;margin:10px;background:orange;width:30px;height:30px;z-index:100;background-image:url('images/share.png');background-size:cover;float:right;" onclick="document.getElementById('overlay').style.display='block';"></div>
 <div style="display:inline-block;margin:10px;background:orange;width:30px;height:30px;z-index:100;background-image:url('images/remove.png');background-size:cover;float:right;"></div>
-<div style="display:inline-block;margin:10px;background:orange;width:30px;height:30px;z-index:100;background-image:url('images/upload.png');background-size:cover;float:right;" onClick="window.open('https://myhealthvault.tk/uploadfiles');"></div>
+<div style="display:inline-block;margin:10px;background:orange;width:30px;height:30px;z-index:100;background-image:url('images/upload.png');background-size:cover;float:right;" onClick="window.open('http://myhealthvault.dx.am/uploadfiles');"></div>
 <div style="display:inline-block;margin:10px;background:orange;width:30px;height:30px;z-index:100;background-image:url('images/download.png');background-size:cover;float:right;"></div>
 
 </div>
@@ -1127,7 +1128,7 @@ td, th {
     <td>25/12/2017</td>
     <td>02:55pm</td>
   </tr>
- 
+
 </table>
 
 </div>
@@ -1581,7 +1582,7 @@ color:rgba(0,120,200,1);
 
 
 
-<div class="month">      
+<div class="month">
   <ul>
     <li class="prev">&#10094;</li>
     <li class="next">&#10095;</li>
@@ -1877,12 +1878,12 @@ cursor:pointer;
 
 
 <div class="services-container">
-  
 
-  
-  
-  
-  
+
+
+
+
+
 <div id="services-sidebar">
 
 <div class="sicon">Private Hospitals</div>
@@ -1917,12 +1918,12 @@ cursor:pointer;
 
 
 </div>
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
 <div style="background:white;font-size:12px;color:black;font-weight:300;text-align:center;overflow-y:scroll;height:100%;">
 
 
@@ -1956,13 +1957,13 @@ phone<br>
 
 
 </div>
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
 </div>
 
 </div>
@@ -1973,7 +1974,7 @@ phone<br>
 
 
 
-@media only screen and (max-width:600px) 
+@media only screen and (max-width:600px)
 {
 .services-item{
 display:flex;
@@ -1998,7 +1999,7 @@ padding:2%;
 }
 }
 
-@media only screen and (min-width:600px) 
+@media only screen and (min-width:600px)
 {
 .services-item{
 display:flex;
@@ -2381,18 +2382,18 @@ d.style.display = "block";
 
 
 
-var obj = 
+var obj =
 [
-{ 
-"datatype":"blood pressure", 
+{
+"datatype":"blood pressure",
 "value":[ 80, 170, 110, 90, 140 ],
 "hour":[ 8, 17, 13, 20, 22 ],
 "day":[ 8, 17, 13, 20, 22 ],
 "month":[ 1,2,3,4,5 ],
 "year":[ 2017, 2017, 2017, 2017, 2017 ],
 },
-{ 
-"datatype":"blood pressure", 
+{
+"datatype":"blood pressure",
 "value":[ 80, 170, 110, 90, 140 ],
 "hour":[ 8, 17, 13, 20, 22 ],
 "day":[ 8, 17, 13, 20, 22 ],
@@ -2533,7 +2534,7 @@ ctx.closePath();
 
 USER_profile=
 {
-"name":"John Prince", 
+"name":"John Prince",
 "DOB_day":1,
 "DOB_month":1,
 "DOB_year":2000,
@@ -2583,7 +2584,7 @@ if (this.readyState == 4 && this.status == 200)
 	initfiles();
 }
 };
-xmlhttp.open("GET", "subjects.txt", true);
+xmlhttp.open("GET", "filelist.php?id="+user, true);
 xmlhttp.send();
 
 
@@ -2593,7 +2594,7 @@ var x1="";
 
 for(var i=0;i<USER_files.length;i++)
 {
-x1 = x1+ 
+x1 = x1+
 '<div class="file_icon" >\
 <img src="images\\pdf.png" width=100>\
 <div style="padding:5px;text-align:center;font-weight:bold;">'+USER_files[i].name+'</div>\
@@ -2626,7 +2627,7 @@ if (this.readyState == 4 && this.status == 200)
 	initfiles();
 }
 };
-xmlhttp.open("GET", "filelist.php", true);
+xmlhttp.open("GET", "filelist.php?id="+user, true);
 xmlhttp.send();
 
 
@@ -2636,7 +2637,7 @@ var x1="";
 
 for(var i=0;i<USER_files.length;i++)
 {
-x1 = x1+ 
+x1 = x1+
 '<div class="file_icon" >\
 <img src="images\\pdf.png" width=100>\
 <div style="padding:5px;text-align:center;font-weight:bold;">'+USER_files[i].name+'</div>\
@@ -2656,37 +2657,37 @@ USER_contacts=
 
 {
 "name":"user1",
-"email":"basilky@gmail.com",
+"email":"abcde@gmail.com",
 "phone":"+91 00000 98765",
 },
 
 {
 "name":"user2",
-"email":"basilky@gmail.com",
+"email":"abcde@gmail.com",
 "phone":"+91 00000 98765",
 },
 
 {
 "name":"user3",
-"email":"basilky@gmail.com",
+"email":"abcde@gmail.com",
 "phone":"+91 00000 98765",
 },
 
 {
 "name":"user4",
-"email":"basilky@gmail.com",
+"email":"abcde@gmail.com",
 "phone":"+91 00000 98765",
 },
 
 {
 "name":"user5",
-"email":"basilky@gmail.com",
+"email":"abcde@gmail.com",
 "phone":"+91 00000 98765",
 },
 
 {
 "name":"user6",
-"email":"basilky@gmail.com",
+"email":"abcde@gmail.com",
 "phone":"+91 00000 98765",
 }
 
@@ -2703,7 +2704,7 @@ var x2="";
 
 for(var i=0;i<USER_contacts.length;i++)
 {
-x2 = x2+ 
+x2 = x2+
 '<div style="display:inline-block;width:96%;padding:1%;font-weight:bold;">\
 <div style="display:inline-block;width:40px;height:40px;background:rgb(250,50,50);border-radius:50%;color:white;"></div>\
 <p style="display:inline-block;padding:2%;width:200px;">'+USER_contacts[i].name+'</p>\
@@ -2758,7 +2759,7 @@ var x4="";
 
 for(var i=0;i<USER_shared_by.length;i++)
 {
-x4 = x4+ 
+x4 = x4+
 '<div class="file_icon" onclick="show(\'people\');acc1('+i+');">\
 <img src="images\\profilepic.png" width=100>\
 <div style="padding:5px;text-align:center;font-weight:bold;">'+USER_shared_by[i].email+'</div>\
@@ -2774,7 +2775,7 @@ var x5="";
 
 for(var i=0;i<USER_shared_by[x].share_files.length;i++)
 {
-x5 = x5+ 
+x5 = x5+
 
 '<div class="file_icon" >\
 <img src="images\\pdf.png" width=100>\
@@ -2832,7 +2833,7 @@ var x12="";
 
 for(var i=0;i<USER_shared_with.length;i++)
 {
-x12 = x12+ 
+x12 = x12+
 '<div class="file_icon" onclick="show(\'people\');acc2('+i+');">\
 <img src="images\\profilepic.png" width=100>\
 <div style="padding:5px;text-align:center;font-weight:bold;">'+USER_shared_with[i].email+'</div>\
@@ -2848,7 +2849,7 @@ function acc2(x)
 var x13="";
 for(var i=0;i<USER_shared_with[x].share_files.length;i++)
 {
-x13 = x13+ 
+x13 = x13+
 
 '<div class="file_icon" onclick="preview('+x+','+i+');">\
 <img src="images\\pdf.png" width=100>\
@@ -2873,9 +2874,9 @@ document.getElementById("HVUD_people_shared_files").innerHTML = x13;
 
 function preview(x,i)
 {
-    
-    window.open("https://myhealthvault.tk/download.php?email=basilky145@gmail.com&file="+USER_shared_with[x].share_files[i]);
-    
+
+    window.open("http://myhealthvault.dx.am/download.php?email="+USER_shared_with[x].email+"&file="+USER_shared_with[x].share_files[i]);
+
 }
 
 

@@ -17,10 +17,10 @@ header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
 header('Pragma: public');
 header('Content-Length: ' . $size);
 */
-    $location="https://myhealthvault.tk/documents/".$email."/".$file;
+    $location="http://myhealthvault.dx.am/documents/".$email."/".$file;
 
     print "<META http-equiv='refresh' content='1;URL=$location'>";
-    //   header( "Location: https://myhealthvault.tk" );
+    //   header( "Location: https://myhealthvault.dx.am" );
 
    // echo "<a href='$location'>download</a> ";
 }

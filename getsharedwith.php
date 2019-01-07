@@ -2,7 +2,7 @@
 if(!empty($_GET['email']))
 {
 	
-	$mysqli = new mysqli('139.59.61.30', 'root', 'Mits@123', 'healthvault');
+	$mysqli = new mysqli('fdb13.awardspace.net', '2491663_healthvault', 'Mits@123', '2491663_healthvault');
 	if ($mysqli->connect_errno) {
     echo "Sorry, this website is experiencing problems.";
     echo "Error: Failed to make a MySQL connection, here is why: \n";

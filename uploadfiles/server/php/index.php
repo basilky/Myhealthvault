@@ -11,7 +11,7 @@
  */
 session_start();
 
-  $dir='/home/mreuser1/public_html/myhealthvault.tk/documents/'.$_SESSION['username'].'/';
+  $dir='../../../documents/'.$_SESSION['username'].'/';
  // echo $dir;
 //exit;
 error_reporting(E_ALL | E_STRICT);
