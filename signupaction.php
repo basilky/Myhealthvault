@@ -2,7 +2,6 @@
 require './mailer/class.phpmailer.php';
 $mysqli = new mysqli('fdb13.awardspace.net', '2491663_healthvault', 'Mits@123', '2491663_healthvault');
 
-//$mysqli = new mysqli('localhost', 'mreuser1_mits', 'mits@123','mreuser1_healthvault');
 if ($mysqli->connect_errno)
 {
     echo "Sorry, this website is experiencing problems.";
@@ -37,21 +36,6 @@ var_dump($activationcode);
 
     if ($result)
     {
-/*
-$mail = new PHPMailer;
-$mail->isSMTP();
-$mail->Host = 'mail.myhealthvault.dx.am';
-$mail->SMTPAuth = true;
-$mail->Username = 'mail.myhealthvault.dx.am';
-$mail->Password = 'Mits@123';
-//$mail->SMTPSecure = 'tls';
-$mail->Port = 587;
-$mail->setFrom('mail@myhealthvault.dx.am','HealthVault');
-$mail->addReplyTo('mail@myhealthvault.dx.am', 'HealthVault');
-$mail->addAddress($email);   // Add a recipient
-//$mail->addCC('cc@example.com');
-//$mail->addBCC('bcc@example.com');
-$mail->isHTML(true);  // Set email format to HTML*/
         $bodyContent = "<html>
 
 <body>
@@ -63,18 +47,7 @@ $mail->isHTML(true);  // Set email format to HTML*/
     <div style='padding-top:4px;'><br><br>Powered by <a href='Healthvault'>myhealthvault.dx.am</a></div>
 </body>
 
-</html>"; /*
-        $mail->Subject = 'Account verification for HealthVault';
-        $mail->Body    = $bodyContent;
-        }
-        if(!$mail->send()) {
-        echo 'Verification code could not be sent.';
-        echo 'Mailer Error: ' . $mail->ErrorInfo;
-
-        } else {
-        echo 'Verification link has been sent to your email id.';
-        }*/
-// To send HTML mail, the Content-type header must be set
+</html>"; 
         $headers[] = 'MIME-Version: 1.0';
         $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 
@@ -99,5 +72,4 @@ $mail->isHTML(true);  // Set email format to HTML*/
     }
 
 }
-//$result->free();
 $mysqli->close();
